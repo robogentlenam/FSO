@@ -5,8 +5,8 @@ import Person from './Person';
 const Persons = ({filteredNames}) =>{
   return(
   <ul>
-  {filteredNames.map((person) => (
-        <Person key={person.id} person={person} />
+  {filteredNames.map((persons) => (
+        <Person key={persons.id} persons={persons} />
 
   ))}
 </ul>

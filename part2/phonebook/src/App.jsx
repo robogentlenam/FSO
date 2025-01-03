@@ -51,16 +51,12 @@ const App = () => {
     setFilterName(event.target.value);
   };
 
-  const Person = ({ persons }) => {
-    return <li>{persons.name} {persons.number}</li>;
-  };
-
   return (
     <div>
       <h2>Phonebook</h2>
       <Filter filterName={filterName} handleFilterChange={handleFilterChange} ></Filter>
       <h3>Add a new</h3>
-      <PersonForm onSubmit={addName} newName={newName} newNumber={newNumber} handleNameChange={handleNameChange} handleNumberChange={handleNumberChange}/>
+      <PersonForm addName={addName} newName={newName} newNumber={newNumber} handleNameChange={handleNameChange} handleNumberChange={handleNumberChange}/>
      
       <div>debug: {newName}</div>
       <h2>Numbers</h2>
